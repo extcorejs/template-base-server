@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all clean tsc",
-    "build:doc": "ts-node bin/generate-doc.ts",
+    "build:doc": "ts-node -r tsconfig-paths/register --files bin/generate-doc.ts",
     "clean": "rimraf build",
     "dev": "nodemon",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint '*/**/*.{js,ts}' --fix --quiet",
-    "start": "node build",
+    "start": "node -r ./tsconfig-paths.js build",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "verify:types": "tsc --noEmit",
@@ -34,6 +34,7 @@
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.3.0",
+    "tsconfig-paths": "^3.11.0",
     "typescript": "^4.4.4"
   },
   "dependencies": {
