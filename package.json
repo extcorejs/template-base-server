@@ -38,6 +38,6 @@
     "typescript": "~4.4.4"
   },
   "dependencies": {
-    "@extcore/server": "^1.0.3"
+    "@extcore/server": "^1.1.0"
   }
 }
